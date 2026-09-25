@@ -13,7 +13,10 @@ Cài đặt:
 -> Hoặc dùng công cụ nào bạn quen khác Markitdown
 """
 
+import json
 from pathlib import Path
+
+from markitdown import MarkItDown
 
 
 LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
@@ -21,40 +24,57 @@ OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 
 def convert_legal_docs() -> None:
-    # TODO:Convert PDF/DOCX vào standardized/legal. 
-    #
-    # from markitdown import MarkItDown
-    # legal_dir = LANDING_DIR / "legal"
-    # output_dir = OUTPUT_DIR / "legal"
-    # output_dir.mkdir(parents=True, exist_ok=True)
-    # converter = MarkItDown()
-    # for path in legal_dir.iterdir():
-    #     if path.suffix.lower() in {".pdf", ".doc", ".docx"}:
-    #         result = converter.convert(str(path))
-    #         (output_dir / f"{path.stem}.md").write_text(
-    #             result.text_content, encoding="utf-8"
-    #         )
-    raise NotImplementedError("Implement convert_legal_docs")
+    """Convert PDF/DOCX vào standardized/legal."""
+    legal_dir = LANDING_DIR / "legal"
+    output_dir = OUTPUT_DIR / "legal"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    converter = MarkItDown()
+    converted = 0
+
+    for path in legal_dir.iterdir():
+        if path.suffix.lower() in {".pdf", ".doc", ".docx"}:
+            output_path = output_dir / f"{path.stem}.md"
+            result = converter.convert(str(path))
+            content = result.text_content or ""
+            if not content.strip():
+                print(f"Warning: empty conversion for {path.name}")
+                continue
+            output_path.write_text(content, encoding="utf-8")
+            converted += 1
+            print(f"Converted: {path.name} -> {output_path.name}")
+
+    print(f"Legal docs converted: {converted}")
 
 
 def convert_news_articles() -> None:
-    # TODO: Convert JSON vào standardized/news.
-    #
-    # import json
-    # news_dir = LANDING_DIR / "news"
-    # output_dir = OUTPUT_DIR / "news"
-    # output_dir.mkdir(parents=True, exist_ok=True)
-    # for path in news_dir.glob("*.json"):
-    #     data = json.loads(path.read_text(encoding="utf-8"))
-    #     header = (
-    #         f"# {data['title']}\n\n"
-    #         f"**Source:** {data['url']}\n\n"
-    #         f"**Crawled:** {data['date_crawled']}\n\n---\n\n"
-    #     )
-    #     (output_dir / f"{path.stem}.md").write_text(
-    #         header + data["content_markdown"], encoding="utf-8"
-    #     )
-    raise NotImplementedError("Implement convert_news_articles")
+    """Convert JSON vào standardized/news."""
+    news_dir = LANDING_DIR / "news"
+    output_dir = OUTPUT_DIR / "news"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    converted = 0
+
+    for path in news_dir.glob("*.json"):
+        data = json.loads(path.read_text(encoding="utf-8"))
+
+        content_md = data.get("content_markdown", "")
+        if not content_md.strip():
+            print(f"Warning: empty content in {path.name}")
+            continue
+
+        header = (
+            f"# {data.get('title', 'Untitled')}\n\n"
+            f"**Source:** {data.get('url', 'N/A')}\n\n"
+            f"**Crawled:** {data.get('date_crawled', 'N/A')}\n\n---\n\n"
+        )
+
+        output_path = output_dir / f"{path.stem}.md"
+        output_path.write_text(header + content_md, encoding="utf-8")
+        converted += 1
+        print(f"Converted: {path.name} -> {output_path.name}")
+
+    print(f"News articles converted: {converted}")
 
 
 def convert_all() -> None:

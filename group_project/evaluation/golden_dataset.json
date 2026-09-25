@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Thí sinh được phép mang những vật dụng nào vào phòng thi IELTS?",
+    "expected_answer": "Thí sinh chỉ được phép mang giấy tờ tùy thân hợp lệ (CMND/CCCD hoặc Hộ chiếu đã đăng ký) và nước lọc trong chai nhựa trong suốt không có nhãn mác vào phòng thi. Tất cả các vật dụng khác như bút, tẩy, điện thoại, đồng hồ đều không được mang vào.",
+    "expected_context": "Vật dụng được phép mang vào phòng thi bao gồm giấy tờ tùy thân hợp lệ và nước uống đựng trong chai nhựa trong suốt, không nhãn mác. Bút và các dụng cụ khác sẽ được ban tổ chức cung cấp."
+  },
+  {
+    "question": "Thời gian nhận kết quả thi IELTS trên máy tính là bao lâu?",
+    "expected_answer": "Đối với bài thi IELTS trên máy tính, kết quả thường có trong vòng 3 đến 5 ngày kể từ ngày thi.",
+    "expected_context": "Kết quả thi IELTS trên máy tính có rất nhanh chóng, thường trong vòng 3 đến 5 ngày sau ngày thi."
+  },
+  {
+    "question": "Thời gian nhận kết quả thi IELTS trên giấy là bao lâu?",
+    "expected_answer": "Đối với bài thi IELTS trên giấy, bảng điểm sẽ có sau 13 ngày kể từ ngày thi.",
+    "expected_context": "Đối với hình thức thi IELTS trên giấy, kết quả và bảng điểm sẽ được trả sau 13 ngày kể từ ngày thi."
+  },
+  {
+    "question": "Điểm IELTS Overall được tính và làm tròn như thế nào nếu điểm trung bình 4 kỹ năng kết thúc bằng .25 hoặc .75?",
+    "expected_answer": "Điểm IELTS Overall là điểm trung bình cộng của 4 kỹ năng (Nghe, Đọc, Viết, Nói). Nếu điểm trung bình kết thúc bằng .25 thì được làm tròn lên .5, và nếu kết thúc bằng .75 thì được làm tròn lên điểm band tròn tiếp theo (ví dụ: 6.25 làm tròn thành 6.5, 6.75 làm tròn thành 7.0).",
+    "expected_context": "Điểm tổng (Overall Band Score) được tính bằng trung bình cộng 4 kỹ năng. Quy tắc làm tròn: nếu phần thập phân là .25 sẽ được làm tròn lên .5; nếu là .75 sẽ được làm tròn lên band tròn tiếp theo."
+  },
+  {
+    "question": "Bài thi IELTS bao gồm những kỹ năng nào và thứ tự thi diễn ra như thế nào?",
+    "expected_answer": "Bài thi IELTS gồm 4 kỹ năng: Nghe (Listening), Đọc (Reading), Viết (Writing) và Nói (Speaking). Ba phần Nghe, Đọc, Viết được thi liên tục trong cùng một buổi không có giờ nghỉ giải lao, còn phần thi Nói có thể diễn ra cùng ngày hoặc trong vòng 7 ngày trước/sau ngày thi chính.",
+    "expected_context": "Bài thi IELTS đánh giá toàn diện 4 kỹ năng: Listening, Reading, Writing và Speaking. Ba bài thi Listening, Reading, Writing diễn ra liên tục không ngắt quãng."
+  },
+  {
+    "question": "Hai hình thức thi IELTS chính là gì và đối tượng phù hợp cho từng hình thức?",
+    "expected_answer": "Hai hình thức thi IELTS chính là IELTS Academic (Học thuật) và IELTS General Training (Tổng quát). IELTS Academic dành cho người có nguyện vọng học tập tại các trường đại học hoặc sau đại học, còn IELTS General Training dành cho người đi định cư, làm việc hoặc học nghề ở các nước nói tiếng Anh.",
+    "expected_context": "IELTS có hai hình thức: IELTS Academic dành cho người muốn học tập tại các bậc đại học hoặc cao học; IELTS General Training dành cho những ai muốn định cư, làm việc hoặc tham gia các chương trình đào tạo nghề."
+  },
+  {
+    "question": "Tiêu chí Lexical Resource trong IELTS Writing đánh giá những yếu tố nào?",
+    "expected_answer": "Tiêu chí Lexical Resource đánh giá vốn từ vựng của thí sinh, bao gồm độ đa dạng từ vựng, khả năng sử dụng từ ngữ chính xác, sử dụng từ ít phổ biến (less common vocabulary), kết hợp từ tự nhiên (collocations) và việc kiểm soát lỗi chính tả, dạng từ.",
+    "expected_context": "Tiêu chí Lexical Resource đánh giá phạm vi từ vựng, độ chính xác khi dùng từ, khả năng dùng collocations và cụm từ nâng cao, cũng như mức độ kiểm soát lỗi chính tả và cấu tạo từ."
+  },
+  {
+    "question": "Tiêu chí Coherence and Cohesion trong IELTS Writing là gì?",
+    "expected_answer": "Coherence and Cohesion đánh giá tính mạch lạc và liên kết của bài viết. Coherence là sự phát triển logic và rõ ràng của các ý tưởng, còn Cohesion là việc sử dụng hợp lý các phương tiện liên kết (từ nối, đại từ thay thế, referencing) và phân chia đoạn văn hợp lý.",
+    "expected_context": "Coherence đề cập đến tính mạch lạc, bố cục ý tưởng logic xuyên suốt bài thi. Cohesion là sự liên kết giữa các câu và đoạn văn thông qua từ nối và các kỹ thuật liên kết từ ngữ."
+  },
+  {
+    "question": "Tiêu chí Grammatical Range and Accuracy trong IELTS Speaking và Writing đo lường điều gì?",
+    "expected_answer": "Tiêu chí Grammatical Range and Accuracy đo lường độ đa dạng của các cấu trúc ngữ pháp (câu đơn, câu ghép, câu phức) và độ chính xác ngữ pháp, mức độ kiểm soát lỗi ngữ pháp và dấu câu của thí sinh.",
+    "expected_context": "Grammatical Range and Accuracy đánh giá sự phong phú về mặt cấu trúc ngữ pháp (sử dụng linh hoạt câu phức, mệnh đề quan hệ, câu điều kiện) cùng với độ chuẩn xác, ít mắc lỗi ngữ pháp cơ bản."
+  },
+  {
+    "question": "Thí sinh có được mang đồng hồ cá nhân vào phòng thi IELTS không?",
+    "expected_answer": "Không, thí sinh không được phép mang bất kỳ loại đồng hồ nào (kể cả đồng hồ cơ hay đồng hồ thông minh) vào phòng thi. Trong phòng thi luôn có đồng hồ treo tường hoặc đồng hồ điện tử hiển thị thời gian chính xác cho thí sinh.",
+    "expected_context": "Mọi loại đồng hồ, bao gồm đồng hồ đeo tay thông thường và smartwatch, đều bị cấm trong phòng thi. Phòng thi được trang bị đồng hồ hiển thị để thí sinh theo dõi thời gian."
+  },
+  {
+    "question": "Quy trình kiểm tra an ninh trước khi vào phòng thi IELTS bao gồm những bước nào?",
+    "expected_answer": "Quy trình bao gồm kiểm tra giấy tờ tùy thân hợp lệ, gửi toàn bộ đồ dùng cá nhân ngoài phòng thi, quét kim loại hoặc kiểm tra an ninh, chụp ảnh chân dung và quét dấu vân tay để xác thực danh tính.",
+    "expected_context": "Trước khi vào phòng thi, thí sinh phải làm thủ tục kiểm tra nhân thân, gửi tư trang cá nhân tại khu vực quy định, chụp ảnh chân dung và lấy dấu vân tay sinh trắc học để đảm bảo tính xác thực."
+  },
+  {
+    "question": "Bảng điểm IELTS (Test Report Form - TRF) có hiệu lực trong bao lâu?",
+    "expected_answer": "Bảng điểm IELTS có giá trị hiệu lực trong vòng 2 năm kể từ ngày thi.",
+    "expected_context": "Bảng điểm IELTS (Test Report Form - TRF) có giá trị công nhận quốc tế trong thời hạn 2 năm tính từ ngày tham gia kỳ thi."
+  },
+  {
+    "question": "Thí sinh muốn yêu cầu chấm phúc khảo (Enquiry on Results - EOR) cần làm gì và trong thời gian bao lâu?",
+    "expected_answer": "Thí sinh có thể nộp đơn yêu cầu chấm phúc khảo (EOR) trong vòng 6 tuần kể từ ngày thi. Thí sinh có thể chọn phúc khảo toàn bộ 4 kỹ năng hoặc chỉ một số kỹ năng nhất định. Nếu điểm số tăng sau phúc khảo, lệ phí phúc khảo sẽ được hoàn lại.",
+    "expected_context": "Thí sinh có quyền yêu cầu phúc khảo kết quả thi (EOR) trong vòng 6 tuần kể từ ngày thi. Lệ phí phúc khảo sẽ được hoàn trả lại nếu kết quả có sự thay đổi nâng band điểm."
+  },
+  {
+    "question": "Thí sinh có thể hủy hoặc đổi ngày thi IELTS không, và chính sách hoàn tiền như thế nào?",
+    "expected_answer": "Thí sinh có thể yêu cầu đổi ngày thi hoặc hủy thi theo quy định: nếu hủy hoặc đổi trước ngày thi ít nhất 5 tuần (hoặc theo quy định cụ thể của trung tâm), thí sinh có thể được đổi ngày hoặc hoàn lại một phần lệ phí (sau khi trừ phí quản lý). Nếu hủy thi trễ do lý do y tế có giấy xác nhận của bệnh viện trong vòng 5 ngày làm việc, thí sinh có thể được xem xét hoàn tiền hoặc chuyển ngày thi.",
+    "expected_context": "Chính sách hủy và chuyển ngày thi quy định thí sinh cần thông báo trước thời hạn quy định để được xem xét. Trường hợp vì lý do y tế đột xuất, cần cung cấp giấy chứng nhận y tế hợp lệ trong vòng 5 ngày làm việc để được hỗ trợ chuyển ngày thi hoặc hoàn phí."
+  },
+  {
+    "question": "Điều gì sẽ xảy ra nếu thí sinh vi phạm quy chế thi IELTS hoặc mang thiết bị gian lận vào phòng thi?",
+    "expected_answer": "Nếu vi phạm quy chế hoặc mang tài liệu, thiết bị điện tử trái phép vào phòng thi, bài thi của thí sinh sẽ bị hủy ngay lập tức, không được hoàn lệ phí thi và có thể bị cấm thi IELTS trên toàn cầu trong vòng 2 năm.",
+    "expected_context": "Thí sinh có hành vi gian lận hoặc mang thiết bị cấm vào phòng thi sẽ bị hủy kết quả bài thi ngay lập tức, không hoàn tiền và có thể đối mặt với lệnh cấm thi IELTS trong thời gian lên tới 2 năm."
+  },
+  {
+    "question": "Phần thi IELTS Speaking kéo dài bao lâu và gồm mấy phần?",
+    "expected_answer": "Phần thi IELTS Speaking kéo dài từ 11 đến 14 phút và gồm 3 phần: Part 1 (giới thiệu và phỏng vấn về các chủ đề quen thuộc, 4-5 phút), Part 2 (thuyết trình cá nhân theo chủ đề trên thẻ gợi ý với 1 phút chuẩn bị và 2 phút nói), Part 3 (thảo luận chuyên sâu hai chiều về các vấn đề liên quan đến chủ đề ở Part 2, 4-5 phút).",
+    "expected_context": "Bài thi IELTS Speaking kéo dài từ 11 đến 14 phút, gồm 3 phần: Part 1 là các câu hỏi chung về bản thân; Part 2 là nói theo chủ đề cue card trong 2 phút; Part 3 là thảo luận mở rộng về các vấn đề trừu tượng."
+  }
+]

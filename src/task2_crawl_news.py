@@ -15,31 +15,36 @@ Cài browser trước khi chạy:
 
 import asyncio
 import json
+from datetime import datetime
 from pathlib import Path
+
+from crawl4ai import AsyncWebCrawler
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://www.idp.com/vietnam/ielts/test-format-and-benefits/",
+    "https://ielts.idp.com/vietnam/about/test-day",
+    "https://ielts.idp.com/vietnam/results/scores",
+    "https://ielts.idp.com/vietnam/about/news-and-articles/article-grammatical-range-accuracy",
+    "https://ielts.org/take-a-test/preparation-resources/on-test-day",
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    """Crawl một URL và trả về dict theo schema."""
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+        title = "Unknown"
+        if result.metadata and isinstance(result.metadata, dict):
+            title = result.metadata.get("title", "Unknown")
+        return {
+            "url": url,
+            "title": title,
+            "date_crawled": datetime.now().isoformat(),
+            "content_markdown": result.markdown or "",
+        }
 
 
 async def crawl_all() -> None:
@@ -49,6 +54,9 @@ async def crawl_all() -> None:
     for index, url in enumerate(ARTICLE_URLS, 1):
         try:
             article = await crawl_article(url)
+            if not article["content_markdown"].strip():
+                print(f"Warning: empty content from {url}")
+                continue
             output = DATA_DIR / f"article_{index:02d}.json"
             output.write_text(
                 json.dumps(article, ensure_ascii=False, indent=2),
